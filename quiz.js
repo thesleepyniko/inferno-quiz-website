@@ -48,6 +48,56 @@ const questions = [
         q: "Your best friend got accused of something serious. You don't know if they did it.", 
         a: ["Stick by them", "Be there, but try to find out what really happened", "Step back for a bit", "Not getting dragged into this"],
         scores: [[0,2], [0,1], [7,1, 8,1], [8,3, 7,1]]
+    },
+    { 
+        q: "You find a wallet with $200 and an ID. No one's around.", 
+        a: ["Track down the owner", "Turn it in somewhere", "Take the cash, leave the wallet", "Finders keepers"],
+        scores: [[0,2], [0,1], [7,2], [7,3, 3,1]]
+    },
+    { 
+        q: "Someone cuts you off in traffic. Your reaction?", 
+        a: ["Whatever, it happens", "Mildly annoyed but move on", "Honk and yell", "Follow them to let them know"],
+        scores: [[0,2], [0,1], [4,2], [4,3, 6,1]]
+    },
+    { 
+        q: "You're at a buffet. How do you approach it?", 
+        a: ["One reasonable plate", "A couple trips, try different things", "I'm getting my money's worth", "I might need to be rolled out"],
+        scores: [[0,2], [0,1], [2,2], [2,3]]
+    },
+    { 
+        q: "A friend tells you a secret about someone else. What do you do?", 
+        a: ["Keep it to myself", "Forget about it honestly", "Tell one person I trust", "This is too good not to share"],
+        scores: [[0,2], [0,1], [7,1], [7,3, 8,1]]
+    },
+    { 
+        q: "You disagree with a rule at work or school. How do you handle it?", 
+        a: ["Follow it anyway", "Bring it up through proper channels", "Quietly ignore it", "Make it known I think it's stupid"],
+        scores: [[0,2], [0,1], [5,1, 7,1], [5,2, 4,1]]
+    },
+    { 
+        q: "Someone you don't like fails at something. How do you feel?", 
+        a: ["Bad for them honestly", "Neutral, not my business", "A little satisfied maybe", "Couldn't have happened to a nicer person"],
+        scores: [[0,2], [0,1], [4,2], [4,3, 6,1]]
+    },
+    { 
+        q: "You could get ahead by stretching the truth. No one would know.", 
+        a: ["Not worth it", "Depends on the stakes", "A little embellishment never hurt", "I'd be stupid not to"],
+        scores: [[0,2], [0,1], [7,2], [7,3]]
+    },
+    { 
+        q: "How do you feel about spending money on yourself?", 
+        a: ["I treat myself when I can", "Save mostly, spend sometimes", "Money's for saving", "I deserve nice things"],
+        scores: [[0,1], [0,1], [3,2], [2,2, 3,1]]
+    },
+    { 
+        q: "Someone trusts you with something important. You mess up.", 
+        a: ["Tell them right away", "Fix it before they notice", "Hope it doesn't come up", "Blame something else"],
+        scores: [[0,2], [0,1], [7,2, 8,1], [7,3, 8,2]]
+    },
+    { 
+        q: "You're offered something you really want, but accepting would hurt someone else.", 
+        a: ["Turn it down", "Try to find a compromise", "Take it but feel bad", "They'd do the same to me"],
+        scores: [[0,2], [0,1], [3,2, 8,1], [6,2, 8,2]]
     }
 ];
 
