@@ -72,6 +72,36 @@ h1 {
     transform: scale(1.02);
 }
 
+#nav {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+#nav button {
+    padding: 10px 14px;
+    font-size: 16px;
+    line-height: 1;
+    font-family: Georgia, serif;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #16213e;
+    color: #eee;
+    border: 2px solid #e94560;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#nav button:hover:not(:disabled) {
+    background-color: #e94560;
+}
+
+#nav button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
 #result button {
     padding: 12px 24px;
     font-size: 16px;

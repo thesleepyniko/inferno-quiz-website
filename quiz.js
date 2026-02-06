@@ -115,6 +115,13 @@ const circles = [
 
 let currentQuestion = 0;
 let scores = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let answers = [];
+
+function updateNav() {
+    document.getElementById('back-btn').disabled = currentQuestion === 0;
+    document.getElementById('forward-btn').disabled = currentQuestion >= answers.length;
+    document.getElementById('nav').style.display = '';
+}
 
 function showQuestion(index) {
     const container = document.getElementById('quiz');
@@ -131,14 +138,31 @@ function showQuestion(index) {
     
     container.innerHTML = html;
     document.getElementById('current').textContent = index + 1;
+    updateNav();
+}
+
+function applyScores(questionIndex, answerIndex, direction) {
+    const scoreData = questions[questionIndex].scores[answerIndex];
+    for (let i = 0; i < scoreData.length; i += 2) {
+        scores[scoreData[i]] += scoreData[i + 1] * direction;
+    }
 }
 
 function selectAnswer(questionIndex, answerIndex) {
-    const scoreData = questions[questionIndex].scores[answerIndex];
-    for (let i = 0; i < scoreData.length; i += 2) {
-        const circleIndex = scoreData[i];
-        const points = scoreData[i + 1];
-        scores[circleIndex] += points;
+    const previousAnswer = answers[questionIndex];
+    
+    if (previousAnswer !== undefined) {
+        applyScores(questionIndex, previousAnswer, -1);
+    }
+    
+    answers[questionIndex] = answerIndex;
+    applyScores(questionIndex, answerIndex, 1);
+    
+    if (previousAnswer !== answerIndex) {
+        for (let i = questionIndex + 1; i < answers.length; i++) {
+            applyScores(i, answers[i], -1);
+        }
+        answers.length = questionIndex + 1;
     }
     
     currentQuestion++;
@@ -150,9 +174,28 @@ function selectAnswer(questionIndex, answerIndex) {
     }
 }
 
+function goBack() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+    }
+}
+
+function goForward() {
+    if (currentQuestion < answers.length) {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            showQuestion(currentQuestion);
+        } else {
+            showResult();
+        }
+    }
+}
+
 function showResult() {
     document.getElementById('quiz').innerHTML = '';
     document.getElementById('current').parentElement.style.display = 'none';
+    document.getElementById('nav').style.display = 'none';
     
     let maxScore = Math.max(...scores);
     
@@ -179,6 +222,7 @@ function showResult() {
 function restart() {
     currentQuestion = 0;
     scores = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    answers = [];
     document.getElementById('result').innerHTML = '';
     document.getElementById('current').parentElement.style.display = '';
     showQuestion(0);
