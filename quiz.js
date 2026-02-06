@@ -2,104 +2,105 @@ const questions = [
     { 
         q: "You're lost in a city you've never been to. What do you do?", 
         a: ["Find someone and ask for directions", "Open maps, retrace my steps", "Just keep walking, I'll figure it out", "Panic, probably"],
-        scores: [[0,1], [0,1], [5,1], [1,2, 4,1]]
+        scores: [[1,2], [5,2], [6,2], [4,2,8,1]]
     },
     { 
         q: "Big test tomorrow, or maybe a conversation you've been dreading. How do you deal?", 
         a: ["Ask someone who's done it before", "Study or prep until I can't anymore", "Show up and see what happens", "Avoid it until I can't"],
-        scores: [[0,1], [0,1], [6,1], [2,1, 3,1]]
+        scores: [[1,2], [5,2], [6,2], [2,2,8,1]]
     },
     { 
         q: "When you really want something, does logic even matter?",
         a: ["Yeah, I think before I act", "Depends on the situation", "Not really, I just go for it", "Logic? What's that?"],
-        scores: [[0,1], [0,1], [1,1], [1,3]]
+        scores: [[5,2], [1,2], [2,2], [2,3,6,1]]
     },
     { 
         q: "New show drops. You love it. What happens?", 
         a: ["Watch an episode or two a night", "Finish it in a week maybe", "Gone by 4am", "It's all I think about now"],
-        scores: [[0,1], [0,1], [2,2], [2,3, 1,1]]
+        scores: [[3,2], [3,1,2,1], [2,3], [2,3,4,1]]
     },
     { 
         q: "Friend wants to borrow something you never use. What's going through your head?", 
         a: ["Yeah take it, I don't care", "Fine but I want it back", "Ugh, but what if I need it later", "Just go buy your own"],
-        scores: [[0,2], [0,1], [3,2], [3,3, 8,1]]
+        scores: [[0,2], [1,2], [3,2], [8,2,4,1]]
     },
     { 
         q: "Someone embarrassed you in front of people. It was an accident. A year later, how do you feel?", 
         a: ["Forgot about it", "I remember but whatever", "Still kind of annoyed", "Waiting to return the favor"],
-        scores: [[0,2], [0,1], [4,2], [4,3, 6,1]]
+        scores: [[0,2], [1,2], [4,2], [4,3,6,1]]
     },
     { 
         q: "Everyone around you believes something. You're not sure you do.", 
         a: ["They're probably onto something", "I'll nod along, keep my thoughts to myself", "I need to look into it myself", "If everyone believes it, I'm skeptical"],
-        scores: [[0,2], [0,1], [5,1], [5,3, 7,1]]
+        scores: [[1,2], [1,1,3,1], [5,2], [5,2,7,1]]
     },
     { 
         q: "Two of your friends are fighting. Bad. What do you do?", 
         a: ["Get in there, try to fix it", "Stay out of it", "Pick a side", "Let them sort it out themselves"],
-        scores: [[0,2], [0,1], [4,1], [6,3, 4,1]]
+        scores: [[0,2], [3,2], [4,2], [6,2,5,1]]
     },
     { 
         q: "Your paycheck is way higher than it should be. No one noticed.", 
         a: ["Tell HR or whoever", "Bring it up at some point", "Say nothing", "Free money"],
-        scores: [[0,2], [0,1], [7,2, 3,1], [7,3]]
+        scores: [[0,2], [1,2], [7,2,3,1], [7,3]]
     },
     { 
         q: "Your best friend got accused of something serious. You don't know if they did it.", 
         a: ["Stick by them", "Be there, but try to find out what really happened", "Step back for a bit", "Not getting dragged into this"],
-        scores: [[0,2], [0,1], [7,1, 8,1], [8,3, 7,1]]
+        scores: [[0,2], [5,2], [8,2], [8,3,7,1]]
     },
     { 
         q: "You find a wallet with $200 and an ID. No one's around.", 
         a: ["Track down the owner", "Turn it in somewhere", "Take the cash, leave the wallet", "Finders keepers"],
-        scores: [[0,2], [0,1], [7,2], [7,3, 3,1]]
+        scores: [[0,2], [1,2], [7,2], [7,3,3,1]]
     },
     { 
         q: "Someone cuts you off in traffic. Your reaction?", 
         a: ["Whatever, it happens", "Mildly annoyed but move on", "Honk and yell", "Follow them to let them know"],
-        scores: [[0,2], [0,1], [4,2], [4,3, 6,1]]
+        scores: [[0,2], [1,2], [4,2], [4,3,6,1]]
     },
     { 
         q: "You're at a buffet. How do you approach it?", 
         a: ["One reasonable plate", "A couple trips, try different things", "I'm getting my money's worth", "I might need to be rolled out"],
-        scores: [[0,2], [0,1], [2,2], [2,3]]
+        scores: [[3,2], [3,1,2,1], [2,3], [2,3,6,1]]
     },
     { 
         q: "A friend tells you a secret about someone else. What do you do?", 
         a: ["Keep it to myself", "Forget about it honestly", "Tell one person I trust", "This is too good not to share"],
-        scores: [[0,2], [0,1], [7,1], [7,3, 8,1]]
+        scores: [[0,2], [1,2], [7,2], [7,3,8,1]]
     },
     { 
         q: "You disagree with a rule at work or school. How do you handle it?", 
         a: ["Follow it anyway", "Bring it up through proper channels", "Quietly ignore it", "Make it known I think it's stupid"],
-        scores: [[0,2], [0,1], [5,1, 7,1], [5,2, 4,1]]
+        scores: [[1,2], [5,2], [5,1,7,1], [4,2]]
     },
     { 
         q: "Someone you don't like fails at something. How do you feel?", 
         a: ["Bad for them honestly", "Neutral, not my business", "A little satisfied maybe", "Couldn't have happened to a nicer person"],
-        scores: [[0,2], [0,1], [4,2], [4,3, 6,1]]
+        scores: [[0,2], [1,2], [4,2], [4,3,6,1]]
     },
     { 
         q: "You could get ahead by stretching the truth. No one would know.", 
         a: ["Not worth it", "Depends on the stakes", "A little embellishment never hurt", "I'd be stupid not to"],
-        scores: [[0,2], [0,1], [7,2], [7,3]]
+        scores: [[0,2], [1,2], [7,2], [7,3]]
     },
     { 
         q: "How do you feel about spending money on yourself?", 
         a: ["I treat myself when I can", "Save mostly, spend sometimes", "Money's for saving", "I deserve nice things"],
-        scores: [[0,1], [0,1], [3,2], [2,2, 3,1]]
+        scores: [[2,2], [3,2], [3,2], [2,2,6,1]]
     },
     { 
         q: "Someone trusts you with something important. You mess up.", 
         a: ["Tell them right away", "Fix it before they notice", "Hope it doesn't come up", "Blame something else"],
-        scores: [[0,2], [0,1], [7,2, 8,1], [7,3, 8,2]]
+        scores: [[0,2], [5,2], [7,2,8,1], [7,3,8,2]]
     },
     { 
         q: "You're offered something you really want, but accepting would hurt someone else.", 
         a: ["Turn it down", "Try to find a compromise", "Take it but feel bad", "They'd do the same to me"],
-        scores: [[0,2], [0,1], [3,2, 8,1], [6,2, 8,2]]
+        scores: [[0,2], [5,2], [3,2,8,1], [6,2,8,2]]
     }
 ];
+
 
 const circles = [
     { name: "First Circle: Limbo", desc: "The lightest fate - you lived virtuously but without faith. You join Virgil, Homer, Ovid, Aristotle, and Socrates in a peaceful castle. Your only punishment is eternal longing - you see the light of God but can never reach it. The contrapasso: those who lived without knowing Christ exist without His presence forever." },
